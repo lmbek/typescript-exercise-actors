@@ -1,0 +1,46 @@
+{
+    "html": {
+        "tag": "body",
+        "children": [
+            {
+                "tag": "nav",
+                "attributes": { "id": "menuContainer" },
+                "children": [
+                    {
+                        "tag": "ul",
+                        "attributes": { "id": "menuItemContainer" },
+                        "children": [
+                            {"tagName": ""}
+                        ]
+                    }
+                ]
+            },
+            {
+                "tag": "main",
+                "children": [
+                    {
+                        "tag": "section",
+                        "attributes": {
+                            "id": "container",
+                            "class": "test2",
+                            "contenteditable": "true"
+                        },
+                        "innerText": "Hello World",
+                        "children": [
+                            {
+                                "tag": "div",
+                                "attributes": { "class": "bob bob2" }
+                            },
+                            { "tag": "div" },
+                            { "tag": "div" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "tag": "footer",
+                "children": []
+            }
+        ]
+    }
+}
