@@ -13,8 +13,6 @@ export interface Information {
 export class ShowActor {
     static currentDataIndex:number = -1;
 
-
-
     constructor(data: Content[]) {
         let getMenuItems = document.querySelectorAll("#menuItemContainer > .menuItem");
 
@@ -22,7 +20,7 @@ export class ShowActor {
             element.setAttribute("data-index", `${index}`);
             element.textContent = data[index].name;
             element?.addEventListener("click",  (e)=>{
-                this.changeContent(data, e, index)
+                this.changeContent(data, e)
             });
         });
 
@@ -32,12 +30,20 @@ export class ShowActor {
         document.querySelector("#imagecon")?.appendChild(showImg);
     }
 
-    changeContent(data: Content[], event: Event, index: number) {
-        console.log(data, event, index);
-        console.log(index);
-        ShowActor.currentDataIndex = index;
+    changeContent(data: Content[], event: Event) {
+        console.log(data, event);
+
         let mHeadline = document.querySelector("#headline");
+
+        const target = event.currentTarget as HTMLElement; // Cast to HTMLElement
+        const index: string | undefined = target.dataset.index; // Access dataset properties
+        if(index!==undefined){
+            ShowActor.currentDataIndex = parseInt(index);
+        }
+
         console.log(mHeadline);
+        console.log(index);
+
         /*
         if(event.currentTarget!= null) {
             const index = event.currentTarget.dataset.index;
