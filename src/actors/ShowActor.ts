@@ -1,18 +1,16 @@
-type Character = {
-    name: string;
-    img: string;
-    information: {
-        strength: number;
-        lives: number;
-    };
-    text: string;
-};
+export interface Content {
+    name:        string;
+    img:         string;
+    information: Information;
+    text:        string;
+}
 
-type Content = {
-    content: Character[];
-};
+export interface Information {
+    strength: number;
+    lives:    number;
+}
 
-class ShowActor {
+export class ShowActor {
     constructor(data: Content[]) {
 
         let getMenuItems = document.querySelectorAll("#menuItemContainer > .menuItem");
@@ -34,4 +32,3 @@ class ShowActor {
         console.log('mymenu')
     }
 }
-export default ShowActor;
