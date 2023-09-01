@@ -1,45 +1,66 @@
 {
     "html": {
-        "tag": "body",
+        "tagName": "body",
         "children": [
             {
-                "tag": "nav",
+                "tagName": "nav",
                 "attributes": { "id": "menuContainer" },
                 "children": [
                     {
-                        "tag": "ul",
+                        "tagName": "ul",
                         "attributes": { "id": "menuItemContainer" },
                         "children": [
-                            {"tagName": ""}
+                            {"tagName": "li", "attributes": { "class": "menuItem", "data-index": "0" }},
+                            {"tagName": "li", "attributes": { "class": "menuItem", "data-index": "1" }},
+                            {"tagName": "li", "attributes": { "class": "menuItem", "data-index": "2" }}
                         ]
                     }
                 ]
             },
             {
-                "tag": "main",
+                "tagName": "section",
+                "attributes": { "id": "cardContainer" },
                 "children": [
                     {
-                        "tag": "section",
-                        "attributes": {
-                            "id": "container",
-                            "class": "test2",
-                            "contenteditable": "true"
-                        },
-                        "innerText": "Hello World",
+                        "tagName": "div",
+                        "attributes": { "id": "card" },
                         "children": [
+                            {"tagName": "div", "attributes": { "id": "headline"}},
+                            {"tagName": "div", "attributes": { "id": "imagecon"}},
+                            {"tagName": "div", "attributes": { "id": "content"}},
                             {
-                                "tag": "div",
-                                "attributes": { "class": "bob bob2" }
-                            },
-                            { "tag": "div" },
-                            { "tag": "div" }
+                                "tagName": "div",
+                                "attributes": { "id": "info"},
+                                "children": [
+                                    {
+                                        "tagName": "div",
+                                        "attributes" : {
+                                            "id": "infochild"
+                                        },
+                                        "children": [
+                                            {
+                                                "tagName": "div",
+                                                "attributes": {
+                                                    "id": "strength"
+                                                }
+                                            },
+                                            {
+                                                "tagName": "div",
+                                                "attributes": {
+                                                    "id": "lives"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
                         ]
                     }
                 ]
             },
             {
-                "tag": "footer",
-                "children": []
+                "tagName": "footer",
+                "attributes": {"id": "footer"}
             }
         ]
     }
